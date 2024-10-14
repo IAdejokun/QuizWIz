@@ -1,0 +1,99 @@
+<section   [ngClass]="{'custom-bg': true}" class="p-8" style="min-height: 100vh;">
+
+    <div class="col-wrapper flex">
+
+    <div class="left w-[50%]">
+        <div>
+            <img src="../../../assets/Logo-white.png" class="w-[100%] max-w-[200px]" alt="logo">
+        </div>
+        
+        <div class="formArea">
+            <h2 class="text-[#C5D86D] font-bold text-2xl font-Nunito pt-5">Create your account and start using QuizWiz</h2>
+        
+            <form (ngSubmit) = "onSubmit()" [formGroup]="registerFormData" class="flex flex-col gap-y-5">
+
+                <div class="flex gap-x-6 mt-9">
+        
+                    <!-- tutor button -->
+                     <span class="group">
+                    <button class="w-44 h-32 group-hover:border-[#C5D86D] group-hover:border-[5px] bg-[#333333] rounded-[0.63rem] ease-in-out duration-150">
+                        <div class="flex flex-col items-center">
+                            <svg width="44" height="50" class="fill-white group-hover:fill-[#C5D86D] transition-all ease-in-out duration-700" viewBox="0 0 44 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.875 25C28.7793 25 34.375 19.4043 34.375 12.5C34.375 5.5957 28.7793 0 21.875 0C14.9707 0 9.375 5.5957 9.375 12.5C9.375 19.4043 14.9707 25 21.875 25ZM31.2305 28.1836L26.5625 46.875L23.4375 33.5938L26.5625 28.125H17.1875L20.3125 33.5938L17.1875 46.875L12.5195 28.1836C5.55664 28.5156 0 34.209 0 41.25V45.3125C0 47.9004 2.09961 50 4.6875 50H39.0625C41.6504 50 43.75 47.9004 43.75 45.3125V41.25C43.75 34.209 38.1934 28.5156 31.2305 28.1836Z"/>
+                            </svg>
+                            <p class="font-bold font-Nunito text-base text-white group-hover:text-[#C5D86D] transition-all ease-in-out duration-700">Sign in as a tutor</p>
+                        </div>
+                    </button>
+                    </span>
+
+                    <!-- learner button -->
+                     <span class="group">
+                    <button class="w-44 h-32 group-hover:border-[#C5D86D] group-hover:border-[5px] bg-[#333333] rounded-[0.63rem] ease-in-out duration-150 group">
+                        <div class="flex flex-col items-center">
+                            <svg width="44" height="50" class="fill-white group-hover:fill-[#C5D86D] transition-all ease-in-out duration-150" viewBox="0 0 44 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M31.1899 31.3095L21.8739 40.6255L12.558 31.3095C5.5759 31.6122 0 37.3248 0 44.3753V45.3127C0 47.9005 2.09951 50 4.68727 50H39.0606C41.6484 50 43.7479 47.9005 43.7479 45.3127V44.3753C43.7479 37.3248 38.172 31.6122 31.1899 31.3095ZM1.32806 7.79503L1.95303 7.94151V13.6444C1.26947 14.0545 0.781212 14.7673 0.781212 15.6267C0.781212 16.4469 1.23041 17.1305 1.86514 17.5504L0.34178 23.6341C0.175773 24.3079 0.546848 25.0012 1.08393 25.0012H5.16576C5.70285 25.0012 6.07392 24.3079 5.90791 23.6341L4.38455 17.5504C5.01929 17.1305 5.46848 16.4469 5.46848 15.6267C5.46848 14.7673 4.98023 14.0545 4.29666 13.6444V8.50788L10.7417 10.0605C9.90186 11.7401 9.37454 13.6151 9.37454 15.6267C9.37454 22.5306 14.97 28.1261 21.8739 28.1261C28.7779 28.1261 34.3733 22.5306 34.3733 15.6267C34.3733 13.6151 33.8558 11.7401 33.0062 10.0605L42.41 7.79503C44.1873 7.36536 44.1873 5.14867 42.41 4.71901L23.8172 0.22704C22.5477 -0.0756799 21.2099 -0.0756799 19.9404 0.22704L1.32806 4.70924C-0.439432 5.13891 -0.439432 7.36536 1.32806 7.79503Z"/>
+                            </svg>
+                            <p class="font-bold font-Nunito text-base text-white group-hover:text-[#C5D86D] transition-all ease-in-out duration-700">Sign in as a Learner</p>
+                        </div>
+                    </button>
+                    </span>
+
+                    <!-- Create Account button -->
+                     <span class="group">
+                    <button class="w-44 h-32 group-hover:border-[#C5D86D] group-hover:border-[5px] bg-[#333333] rounded-[0.63rem] ease-in-out duration-150">
+                        <div class="flex flex-col items-center">
+                            <svg width="86" height="50" class="fill-white group-hover:fill-[#C5D86D] transition-all ease-in-out duration-700" viewBox="0 0 44 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M60.9375 20.3125H54.6875V14.0625C54.6875 13.2031 53.9844 12.5 53.125 12.5H50C49.1406 12.5 48.4375 13.2031 48.4375 14.0625V20.3125H42.1875C41.3281 20.3125 40.625 21.0156 40.625 21.875V25C40.625 25.8594 41.3281 26.5625 42.1875 26.5625H48.4375V32.8125C48.4375 33.6719 49.1406 34.375 50 34.375H53.125C53.9844 34.375 54.6875 33.6719 54.6875 32.8125V26.5625H60.9375C61.7969 26.5625 62.5 25.8594 62.5 25V21.875C62.5 21.0156 61.7969 20.3125 60.9375 20.3125ZM21.875 25C28.7793 25 34.375 19.4043 34.375 12.5C34.375 5.5957 28.7793 0 21.875 0C14.9707 0 9.375 5.5957 9.375 12.5C9.375 19.4043 14.9707 25 21.875 25ZM30.625 28.125H28.9941C26.8262 29.1211 24.4141 29.6875 21.875 29.6875C19.3359 29.6875 16.9336 29.1211 14.7559 28.125H13.125C5.87891 28.125 0 34.0039 0 41.25V45.3125C0 47.9004 2.09961 50 4.6875 50H39.0625C41.6504 50 43.75 47.9004 43.75 45.3125V41.25C43.75 34.0039 37.8711 28.125 30.625 28.125Z"/>
+                            </svg>
+                            <p class="font-bold font-Nunito text-base text-white group-hover:text-[#C5D86D] transition-all ease-in-out duration-700">Create Account</p>
+                        </div>
+                    </button>
+                </span>
+                </div>
+                
+
+                <div class="flex gap-7">
+                    
+                    <div class="max-w-[50%]">
+                        <label for="input-firstName" class="block text-sm font-bold font-Nunito mb-2">Your First Name</label>
+                        <input formControlName="firstName" type="text" id="input-firstName" class="py-3 px-4 block font-light font-Nunito w-full border-white border-3 rounded-lg text-sm focus:border-white focus:ring-white disabled:opacity-50 disabled:pointer-events-none bg-transparent" placeholder="Type your first name">
+                      </div>
+
+                      <div class="max-w-[50%]">
+                        <label for="input-lastName" class="block text-sm font-bold font-Nunito mb-2">Your Last Name</label>
+                        <input formControlName="lastName" type="text" id="input-lastName" class="py-3 px-4 block font-light font-Nunito w-full border-white border-3 rounded-lg text-sm focus:border-white focus:ring-white disabled:opacity-50 disabled:pointer-events-none bg-transparent" placeholder="Type your last name">
+                      </div>
+
+                </div>
+
+                <!-- Email Address -->
+                <div class="max-w-sm">
+                    <label for="input-email" class="block text-sm font-bold font-Nunito mb-2">Your Email Address</label>
+                    <input formControlName="email" type="email" id="input-email" class="py-3 px-4 block font-light font-Nunito w-full border-white border-3 rounded-lg text-sm focus:border-white focus:ring-white disabled:opacity-50 disabled:pointer-events-none bg-transparent" placeholder="Type your Email ">
+                  </div>
+
+                  <!-- Password -->
+                  <div class="max-w-sm">
+                    <label for="input-password" class="block text-sm font-bold font-Nunito mb-2">Password</label>
+                    <input formControlName="password" type="password" id="input-password" class="py-3 px-4 block w-full font-light font-Nunito border-white border-3 bg-transparent rounded-lg text-sm focus:border-white focus:ring-white disabled:opacity-50 disabled:pointer-events-none" placeholder="Type your Password">
+                  </div>
+
+                  <button [disabled]="!registerFormData.valid" class="w-[9.4rem] h-12 bg-[#F5F5F5] font-bold text-base text-black font-Nunito rounded-[0.63rem] flex justify-center items-center gap-3">Sign Up
+                    <span>
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.2188 12.1094C24.2188 18.7972 18.7972 24.2188 12.1094 24.2188C5.42153 24.2188 0 18.7972 0 12.1094C0 5.42153 5.42153 0 12.1094 0C18.7972 0 24.2188 5.42153 24.2188 12.1094ZM10.7087 18.5212L19.6931 9.53682C19.9981 9.23174 19.9981 8.73706 19.6931 8.43198L18.5882 7.32715C18.2832 7.02202 17.7885 7.02202 17.4833 7.32715L10.1562 14.6542L6.7354 11.2333C6.43032 10.9283 5.93564 10.9283 5.63052 11.2333L4.52568 12.3382C4.22061 12.6433 4.22061 13.1379 4.52568 13.443L9.60381 18.5211C9.90894 18.8263 10.4036 18.8263 10.7087 18.5212Z" fill="black"/>
+                            </svg>
+                  </span>
+                </button>
+            </form>
+                <p class="text-base font-Nunito mt-3">Forgot password? <a class="text-[#C5D86D] hover:underline hover:cursor-pointer">click here </a></p>
+        </div>
+    </div>
+
+    <div class="right w-[50%] justify-end mt-6 lg:flex hidden">
+        <img class="w-[100%] max-w-[540px] h-auto max-h-[550px]" src="../../../assets/authImg.png" alt="authImg">
+    </div>
+
+    </div>
+
+</section>
